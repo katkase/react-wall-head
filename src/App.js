@@ -1,24 +1,25 @@
-import React, { Component } from 'react';
-import { DatePicker } from 'antd';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { LocaleProvider } from "antd";
 
-import logo from './logo.svg';
-import classes from './App.module.less';
+import enUS from "antd/es/locale-provider/en_US";
+import Loadable from "components/Loadable";
 
-class App extends Component {
-  render() {
-    return (
-      <div className={classes.App}>
-        <header className={classes.header}>
-          <img src={logo} className={classes.logo} alt="logo" />
-          <h1 className={classes.title}>Welcome to React</h1>
-        </header>
-        <p className={classes.intro}>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <DatePicker />
-      </div>
-    );
-  }
-}
+const App = props => {
+  return (
+    <LocaleProvider locale={enUS}>
+      <BrowserRouter>
+        <Switch>
+          <Route
+            path="/"
+            component={Loadable({
+              loader: () => import("layouts/BasicLayout"),
+            })}
+          />
+        </Switch>
+      </BrowserRouter>
+    </LocaleProvider>
+  );
+};
 
 export default App;
