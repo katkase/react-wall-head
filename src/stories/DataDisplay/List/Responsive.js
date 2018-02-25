@@ -18,14 +18,21 @@ const data = [
   {
     title: 'Title 4',
   },
+  {
+    title: 'Title 5',
+  },
+  {
+    title: 'Title 6',
+  },
 ];
 
-const grid = () => {
+const responsive = () => {
   return (
     <section className="example">
-      <h3 className="ex-title">Grid</h3>
+      <h3 className="ex-title">Responsive grid list</h3>
+
       <List
-        grid={{ gutter: 16, column: 4 }}
+        grid={{ gutter: 16, xs: 1, sm: 2, md: 4, lg: 4, xl: 6, xxl: 3 }}
         dataSource={data}
         renderItem={item => (
           <List.Item>
@@ -33,8 +40,9 @@ const grid = () => {
           </List.Item>
         )}
       />
+
     </section>
   );
 };
 
-export default grid;
+export default responsive;

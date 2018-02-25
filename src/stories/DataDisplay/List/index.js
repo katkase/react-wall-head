@@ -1,6 +1,12 @@
 import React, { Component, Fragment } from 'react';
 
+import SimpleList from './SimpleList';
+import Basic from './Basic';
+import LoadMore from './LoadMore';
+import Vertical from './Vertical';
 import Grid from './Grid';
+import Responsive from './Responsive';
+import ScrollLoad from './ScrollLoad';
 
 class ListPage extends Component {
   render() {
@@ -15,7 +21,13 @@ class ListPage extends Component {
           A list can be used to display content related to a single subject. The content can consist of multiple elements of varying type and size.
         </p>
         <h2 className="title">Examples:</h2>
+        <SimpleList />
+        <Basic />
+        <LoadMore />
+        <Vertical />
         <Grid />
+        <Responsive />
+        <ScrollLoad />
       </Fragment>
     );
   }
