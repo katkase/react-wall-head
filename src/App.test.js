@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
 // import App from './App';
 
 // it('renders without crashing', () => {
@@ -7,6 +7,6 @@ import ReactDOM from 'react-dom';
 //   ReactDOM.render(<App />, div);
 //   ReactDOM.unmountComponentAtNode(div);
 // });
-it("test App later", () => {
+it('test App later', () => {
   expect(true).toEqual(true);
 });

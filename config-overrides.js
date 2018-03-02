@@ -1,5 +1,3 @@
-const path = require("path");
-
 const { injectBabelPlugin, compose } = require("react-app-rewired");
 //const rewireLess = require("react-app-rewire-less");
 const rewireLess = require("react-app-rewire-less-modules");

@@ -13,12 +13,11 @@ const client = new ApolloClient({
   // By default, this client will send queries to the
   //  `/graphql` endpoint on the same host
   link: new HttpLink({ uri: 'http://localhost:4000/graphql' }),
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 
 ReactDOM.render(
   <ApolloProvider client={client}>
     <App />
-  </ApolloProvider>, document.getElementById('root')
-);
+  </ApolloProvider>, document.getElementById('root'));
 registerServiceWorker();

@@ -1,0 +1,22 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "react/jsx-filename-extension": [1, {"extensions": [".js"]}],
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": [
+      "error", 
+      {
+        "devDependencies": [
+          ".storybook/**",
+          "src/stories/**"
+        ]
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  }
+}

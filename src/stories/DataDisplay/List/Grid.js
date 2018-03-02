@@ -20,21 +20,19 @@ const data = [
   },
 ];
 
-const grid = () => {
-  return (
-    <section className="example">
-      <h3 className="ex-title">Grid</h3>
-      <List
-        grid={{ gutter: 16, column: 4 }}
-        dataSource={data}
-        renderItem={item => (
-          <List.Item>
-            <Card title={item.title}>Card content</Card>
-          </List.Item>
-        )}
-      />
-    </section>
-  );
-};
+const grid = () => (
+  <section className="example">
+    <h3 className="ex-title">Grid</h3>
+    <List
+      grid={{ gutter: 16, column: 4 }}
+      dataSource={data}
+      renderItem={item => (
+        <List.Item>
+          <Card title={item.title}>Card content</Card>
+        </List.Item>
+      )}
+    />
+  </section>
+);
 
 export default grid;

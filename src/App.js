@@ -1,25 +1,23 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { LocaleProvider } from "antd";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { LocaleProvider } from 'antd';
 
-import enUS from "antd/es/locale-provider/en_US";
-import Loadable from "components/Loadable";
+import enUS from 'antd/es/locale-provider/en_US';
+import Loadable from 'components/Loadable';
 
-const App = props => {
-  return (
-    <LocaleProvider locale={enUS}>
-      <BrowserRouter>
-        <Switch>
-          <Route
-            path="/"
-            component={Loadable({
-              loader: () => import("layouts/BasicLayout"),
-            })}
-          />
-        </Switch>
-      </BrowserRouter>
-    </LocaleProvider>
-  );
-};
+const App = () => (
+  <LocaleProvider locale={enUS}>
+    <BrowserRouter>
+      <Switch>
+        <Route
+          path="/"
+          component={Loadable({
+            loader: () => import('layouts/BasicLayout'),
+          })}
+        />
+      </Switch>
+    </BrowserRouter>
+  </LocaleProvider>
+);
 
 export default App;

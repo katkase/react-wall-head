@@ -22,27 +22,24 @@ const data = [
   },
 ];
 
-const basic = () => {
+const basic = () => (
+  <section className="example">
+    <h3 className="ex-title">Basic List</h3>
 
-  return (
-    <section className="example">
-      <h3 className="ex-title">Basic List</h3>
-
-      <List
-        itemLayout="horizontal"
-        dataSource={data}
-        renderItem={item => (
-          <List.Item>
-            <List.Item.Meta
-              avatar={<Avatar src={'data:image/png;base64,' + new Identicon(Math.floor(Math.random()*18446744073709551615).toString(16), 1280).toString()} />}
-              title={<a href="https://ant.design">{item.title}</a>}
-              description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-            />
-          </List.Item>
-        )}
-      />
-    </section>
-  );
-};
+    <List
+      itemLayout="horizontal"
+      dataSource={data}
+      renderItem={item => (
+        <List.Item>
+          <List.Item.Meta
+            avatar={<Avatar src={`data:image/png;base64,${new Identicon(Math.floor(Math.random() * 18446744073709551615).toString(16), 1280).toString()}`} />}
+            title={<a href="https://ant.design">{item.title}</a>}
+            description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+          />
+        </List.Item>
+      )}
+    />
+  </section>
+);
 
 export default basic;
