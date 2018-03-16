@@ -37,7 +37,7 @@ class ProductsList extends Component {
 
 const query = gql`
   {
-    products {
+    products(id: 49) {
       id
       name
       sku
